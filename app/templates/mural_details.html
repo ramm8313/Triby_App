@@ -1,0 +1,42 @@
+<ion-view cache-view="false" view-title="Mural Details" ng-ini="example1 = false">
+  <ion-content style="background-color:#444" scroll="false">
+    <a class="button button-icon button-clear ion-chevron-left" ng-click="closeModal()" style="position: absolute;
+    font-size: 26px;color: white;opacity: 1.0;top:20px;left:7px;"></a>
+    <img ng-click="example1=!example1" ng-src="{{post.pic}}" class="image-size"/>
+    <div ng-hide="example1" class="cssSlideUp mural_footer">
+      <div class="pro_pic" ng-click="goSideChat(post.createdBy._id)">
+          <img ng-if="!post.createdBy.pic" src="img/default_avatar.jpg" class="image-size"/>
+          <img ng-if="post.createdBy.pic" ng-src="{{post.createdBy.pic}}" />
+      </div>
+      <h4 ng-bind="post.createdBy.name"></h4>
+      <div class="icons mural_details_icons">
+        <div class="hand-up text-10-gray">
+            <a ng-click="setLike(post)">
+                <img ng-if="!iconFilter(post.likes)" src="img/hand-up-grey.png" />
+                <img ng-if="iconFilter(post.likes)" src="img/hand-up.png" />
+            </a>
+            <span ng-bind="post.likes.length" ng-if="post.likes.length"></span>
+        </div>
+        <div class="text-10-gray">
+            <a ng-click="setHeart(post)">
+                <img ng-if="!iconFilter(post.hearts)" src="img/heart-grey.png" />
+                <img ng-if="iconFilter(post.hearts)" src="img/heart.png" />
+            </a>
+            <span class="text-heart" ng-bind="post.hearts.length" ng-if="post.hearts.length"></span>
+        </div>
+        <div class="hand-down text-10-gray">
+            <a ng-click="setDislike(post)">
+                <img ng-if="!iconFilter(post.dislikes)" src="img/hand-down-grey.png" />
+                <img ng-if="iconFilter(post.dislikes)" src="img/hand-down.png" />
+            </a>
+            <span ng-bind="post.dislikes.length" ng-if="post.dislikes.length"></span>
+        </div>
+        <div class="comments_area text-12-gray" ng-click="goComment(post)">
+              <img ng-if="post.comments.length" src="img/comments.png" />
+              <img ng-if="!post.comments.length" src="img/comments-grey.png" />
+              <span class="text-comment" ng-bind="post.comments.length" ng-if="post.comments.length"></span>
+          </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

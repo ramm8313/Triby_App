@@ -1,0 +1,16 @@
+<ion-view cache-view="false" view-title="Contacts" ng-controller="ContactsCtrl">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon ion-chevron-left" style="color:white" ng-click="go('app/main/home')"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon" style="color:white" ng-click="getContacts()">Refresh</button>
+    </ion-nav-buttons>
+    <ion-content scroll="false">
+        <div class="list list-noti">
+            <a class="item item-avatar" ng-repeat="contact in contacts" >
+                <img ng-src="{{contact.pic}}">
+                <h2>{{contact.name}}</h2>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

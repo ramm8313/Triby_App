@@ -1,0 +1,18 @@
+<ion-view cache-view="false" view-title="New Triby" ng-controller="NewTribyCtrl">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon ion-chevron-left" style="color:white" ng-click="go('app/main/home')"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon ion-chevron-right" ng-show="triby.name" style="color:white" ng-click="nextStep()"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="edit_info_img" ng-style="{'background-image':'url(' + triby.pic + ')'}" ng-click="uploadPicture()">
+        </div>
+        <br><br>
+        <div class="list list-add-triby">
+            <label class="item item-input">
+                <input type="text" placeholder="Name" ng-model="triby.name">
+            </label>
+        </div>
+    </ion-content>
+</ion-view>

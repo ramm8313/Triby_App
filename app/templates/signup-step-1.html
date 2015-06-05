@@ -1,0 +1,19 @@
+<ion-view cache-view="false" view-title="Sign Up" ng-controller="UserCtrl">
+  <ion-content scroll="true">
+    <div class="singup_third_step_wrapper">
+      <div class="signup_third_step_title">
+        Please enter your name.
+      </div>
+      <div class="signup_third_step_form">
+        <form>
+          <div class="enter_code_box">
+            <input type="text" class="enter_code" ng-model="signupData.username" placeholder="Name">
+          </div>
+          <div class="ok_button_box">
+            <input type="button" class="ok_step_button" value="OK" ng-click="step2()">
+          </div>
+        </form>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

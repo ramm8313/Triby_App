@@ -1,0 +1,33 @@
+<ion-view cache-view="false" view-title="Info" ng-controller="InfoCtrl">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon ion-chevron-left" style="color:white" ui-sref="app.news_feed({triby_id: triby._id})"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="list list-info">
+            <div class="item item-avatar item-icon-right">
+                <img ng-src="{{triby.pic}}">
+                <br>
+                <span>{{triby.name}}</span>
+                <a class="icon ion-ios-compose-outline" ng-href="#/app/edit_info/{{triby._id}}" style="text-decoration: none;color: #2695f9;"></a>
+            </div>
+        </div>
+        <div class="list" style="margin-bottom:0px;">
+            <div class="item item-icon-right" style="text-align:center;border-top:none;border-bottom:none;">
+                <a class="icon ion-ios-plus-outline" href="#/app/add_members"  style="text-decoration: none;color: #2695f9;"></a>
+                <span style="font-size:24px;font-weight:400;color:black">Members</span>
+            </div>
+        </div>
+        <div class="list list-noti" ng-repeat="user in triby.users">
+            <div class="item item-avatar" >
+                <img ng-src="{{user.pic}}">
+                <h2>{{user.name}}</h2>
+            </div>
+        </div>
+        <br>
+        <div class="list list-exit" style="text-align:center" >
+            <label class="item item-input item-text-wrap item-floating-label" ng-click="exitTriby(triby._id)">
+                <span>Exit Triby</span>
+            </label>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,15 @@
+/* Your application styles go here */
+.ng-hide-add, .ng-hide-remove {
+    display: block !important;
+}
+.cssSlideUp {
+    transition: height 1s;
+    overflow: hidden;
+}
+.cssSlideUp.ng-hide {
+    height:0;
+}
+.image-size{
+    height: 100%;
+    width: 100%;
+}

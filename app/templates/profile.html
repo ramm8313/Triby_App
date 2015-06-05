@@ -1,0 +1,33 @@
+<ion-view cache-view="false" view-title="Profile" ng-controller="SettingsCtrl">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon ion-chevron-left" style="color:white" ng-click="go('app/settings')"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon" style="color:#2695f9" ng-show="user_data.name || user_data.username" ng-click="saveProfile()">Done</button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="edit_info_img" ng-style="{'background-image':'url(' + user_data.image + ')'}" ng-click="uploadPicture()">
+            <i class="edit_info_plus icon ion-ios7-plus-outline" style=""></i>
+        </div>
+        <div class="padding"></div>
+        <form novalidate
+        name="LoginForm"
+        ng-submit="saveProfile()">
+            <div class="list list-inset list-profile">
+                <label class="item item-title">
+                    <span>General</span>
+                </label>
+                <label class="item item-input">
+                    <i class="icon ion-person placeholder-icon"></i>&nbsp;
+                    <input ng-if="isFacebookUser()" type="text" placeholder="User name" ng-model="user_data.name">
+                    <input ng-if="!isFacebookUser()" type="text" placeholder="User name" ng-model="user_data.username">
+                </label>
+                <label class="item item-input">
+                    <i class="icon ion-location placeholder-icon"></i>&nbsp;&nbsp;
+                    <input ng-if="isFacebookUser()" type="text" placeholder="Enter city" ng-model="user_data.city">
+                    <input ng-if="!isFacebookUser()" type="text" placeholder="Enter country" ng-model="user_data.country">
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

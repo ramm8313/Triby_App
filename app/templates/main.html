@@ -1,0 +1,21 @@
+<ion-nav-bar align-title="center" class="bar bar-triby"></ion-nav-bar>
+<ion-view cache-view="false">
+  <ion-tabs class="tabs-icon-top tabs-color-active-positive">
+    <!-- notification Tab -->
+    <ion-tab icon-off="ion-ios-bell-outline" hidden="true" icon-on="ion-ios-bell" href="#/app/main/home">
+      <ion-nav-view name="tab-home"></ion-nav-view>
+    </ion-tab>
+    <!-- notification Tab -->
+    <ion-tab icon-off="ion-ios-bell-outline" icon-on="ion-ios-bell" href="#/app/noti">
+      <ion-nav-view animation="none" name="tab-notification"></ion-nav-view>
+    </ion-tab>
+    <!-- add triby Tab -->
+    <ion-tab icon-off="ion-ios-plus" icon-on="ion-ios-plus" class="always-on create_new_tribys_icons" href="#/app/new_triby">
+      <ion-nav-view name="tab-add"></ion-nav-view>
+    </ion-tab>
+    <!-- Setting Tab -->
+    <ion-tab icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/app/settings">
+      <ion-nav-view name="tab-settings"></ion-nav-view>
+    </ion-tab>
+  </ion-tabs>
+</ion-view>

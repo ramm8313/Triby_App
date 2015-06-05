@@ -1,0 +1,22 @@
+<ion-view cache-view="false" view-title="Notifications" ng-controller="AccountCtrl">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon ion-chevron-left" style="color:white" ng-click="go('app/settings')"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-list class="list-notifications">
+        <ion-item class="item-icon-right">
+              Popup Notifications
+              <i class="icon" ng-class="{'ion-ios-circle-filled':notifications.popUpNotifications,'ion-ios-circle-outline':!notifications.popUpNotifications}" style="color:#39b54a" ng-click="switchPopUp()"></i>
+        </ion-item>
+        <ion-item class="item-icon-right">
+              Comments Notification
+              <i class="icon" ng-class="{'ion-ios-circle-filled':notifications.commentsNotifications,'ion-ios-circle-outline':!notifications.commentsNotifications}" style="color:#39b54a" ng-click="switchComments()"></i>
+        </ion-item>
+        <ion-item class="item-icon-right">
+              Side Comments Notification
+              <i class="icon ion-ios-circle-filled" ng-class="{'ion-ios-circle-filled':notifications.sideCommentsNotications,'ion-ios-circle-outline':!notifications.sideCommentsNotications}" style="color:#39b54a" ng-click="switchSideComments()"></i>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+
+</ion-view>

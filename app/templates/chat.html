@@ -1,0 +1,79 @@
+<ion-view cache-view="false" title="Comments">
+    <ion-nav-bar align-title="center" class="bar bar-triby nav-title-slide-ios7"></ion-nav-bar>
+    <ion-nav-view animation="slide-left-right"></ion-nav-view>
+    <ion-nav-buttons side="left">
+        <button class="button button-icon ion-chevron-left" style="color:white" ng-click="go('app/main/home')"></button>
+    </ion-nav-buttons>
+    <ion-content has-bouncing="true" class="has-header has-footer">
+              <div class="message-wrapper" >
+                  <div>
+                    <img class="profile-pic left"
+                          src="img/carla.png"  />
+                      <div class="chat-side-bubble left">
+                          <div class="message" autolinker>
+                            here is a chat box
+                          </div>
+                          <div class="message-detail">
+                              <span>Today 9:32 am</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="cf"></div>
+              </div>
+              <div class="message-wrapper" >
+                  <div>
+                      <img class="profile-pic right" src="img/frank.png" />
+                      <div class="chat-side-bubble right">
+                          <div class="message"  autolinker>
+                            here is another chat msg, more stuff here.
+                          </div>
+                          <div class="message-detail">
+                              <span >Today 9:34 am</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="cf"></div>
+              </div>
+              <div class="message-wrapper" >
+                  <div>
+                      <img class="profile-pic right" src="img/frank.png" />
+                      <div class="chat-side-bubble right">
+                          <div class="message"  autolinker>
+                            here is text msg, more stuff to talk about. Wondering if we'll be using words counts for this one.
+                          </div>
+                          <div class="message-detail">
+                              <span >Today 9:34 am</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="cf"></div>
+              </div>
+              <div class="message-wrapper" >
+                  <div>
+                    <img class="profile-pic left"
+                          src="img/carla.png"  />
+                    <div class="chat-side-bubble left">
+                        <div class="message" autolinker>
+                          here is a chat box, more stuff here
+                        </div>
+                        <div class="message-detail">
+                            <span>Today 9:35 am</span>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="cf"></div>
+              </div>
+              <br>
+          </ion-content>
+          <form name="sendMessageForm" >
+              <ion-footer-bar class="bar-stable item-input-inset message-footer" >
+                  <label class="item-input-wrapper">
+                      <textarea value="" placeholder="Send Mark a message..." required minlength="1" maxlength="1500" msd-elastic></textarea>
+                  </label>
+                  <div class="footer-btn-wrap">
+                    <button class="button button-icon icon ion-android-send footer-btn" type="submit">
+                    </button>
+                  </div>
+              </ion-footer-bar>
+          </form>
+</ion-view>

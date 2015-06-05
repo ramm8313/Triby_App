@@ -1,0 +1,75 @@
+<ion-view cache-view="false" title="Tribys" class="bar-triby">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon ion-ios7-search" style="color:white;" ng-click="go('app/search')"></button>
+    </ion-nav-buttons>
+    <ion-content style="background-color:white">
+        <div class="row row-center" ng-hide="hideEmptyTribes">
+          <div class="col text-no-tribes" style="text-align:center;">
+            Samples
+          </div>
+        </div>
+        <div class="row row-center" ng-hide="hideEmptyTribes">
+          <div class="col col-50 text-no-tribes" style="text-align:center;" >
+            <div class="circle circle-border">
+               <div class="circle-inner">
+                   <div class="triby-text-empty">
+                      BFF
+                    </div>
+               </div>
+            </div>
+          </div>
+          <div class="col col-50 text-no-tribes" style="text-align:center;" >
+            <div class="circle circle-border">
+               <div class="circle-inner">
+                   <div class="triby-text-empty">
+                      Family
+                    </div>
+               </div>
+            </div>
+          </div>
+        </div>
+        <div class="row row-center" ng-hide="hideEmptyTribes">
+          <div class="col col-50 text-no-tribes" style="text-align:center;" >
+            <div class="circle circle-border">
+               <div class="circle-inner">
+                   <div class="triby-text-empty">
+                      School
+                    </div>
+               </div>
+            </div>
+          </div>
+          <div class="col col-50 text-no-tribes" style="text-align:center;" >
+            <div class="circle circle-border">
+               <div class="circle-inner">
+                   <div class="triby-text-empty">
+                      Work
+                    </div>
+               </div>
+            </div>
+          </div>
+        </div>
+        <div class="row row-center tribys_circles" ng-repeat="rows in tribes">
+          <div class="col col-50 triby-title" style="text-align:center;" ng-repeat="item in rows">
+            <div class="tribys_name_text" style="text-align: center">
+              {{item.name}}
+            </div>
+            <a class="tribys_pic_circle" ui-sref="app.news_feed({triby_id:item._id})">
+              <img ng-src="{{item.pic}}" />
+            </a>
+          </div>
+        </div>
+    </ion-content>
+    <ion-footer-bar class="msg-no-tribys homepage_blue_wrapper" ng-hide="hideEmptyTribes">
+      <div class="list list-message-blue homepage_blue_area">
+        <div class="item">
+          Let's get started!
+        </div>
+        <div class="item">
+          Create Tribys
+        </div>
+        <div class="item">
+          <i class="icon ion-arrow-down-c" style="font-size:32px"></i>
+        </div>
+      </div>
+    </ion-footer-bar>
+</ion-view>
